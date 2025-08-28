@@ -11,9 +11,7 @@ const app = express();
 const port = process.env.PORT || 8000; // fallback for local dev
 
 // Middleware
-app.use(cors({
-  origin: "https://mern-todo-frontend-wine.vercel.app/"
-}));
+app.use(cors()); // allow all for now
 
 app.use(express.json()); // parse JSON requests
 
