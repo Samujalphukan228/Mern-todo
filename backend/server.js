@@ -11,10 +11,7 @@ const app = express();
 const port = process.env.PORT || 8000; // fallback for local dev
 
 // Middleware
-// Only allow requests from your frontend URL (replace with your deployed frontend URL)
-app.use(cors({
-  origin: "https://your-frontend-url.vercel.app" 
-}));
+app.use(cors()); // allow all for now
 
 app.use(express.json()); // parse JSON requests
 
