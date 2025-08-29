@@ -10,12 +10,8 @@ connectDB();
 const app = express();
 const port = process.env.PORT || 8000; // fallback for local dev
 
-app.use(cors({
-  origin: [
-    process.env.FRONTEND_URL_CLIENT, // Client frontend
-  ],
-  credentials: true
-}));
+// Middleware
+app.use(cors()); // allow all for now
 
 app.use(express.json()); // parse JSON requests
 
